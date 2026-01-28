@@ -42,19 +42,5 @@ def print_welcome():
     print(WELCOME_STRING)
 
 
-def main():
-    try:
-        print(WELCOME_STRING)
-        while True:
-            print(create_menu_string())
-            break
-
-    except (KeyboardInterrupt, EOFError):
-        print("\ngoodbye!")
-
-
 __all__ = ["print_welcome",
            "create_items_menu", "create_menu_string", "create_journal_menu_string"]
-
-if __name__ == "__main__":
-    main()
