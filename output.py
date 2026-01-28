@@ -31,7 +31,7 @@ def list_items(ls):
     return s
 
 
-def create_items_menu(ls, item):
+def create_igtems_menu(ls, item):
     s = f"\nplease choose {item} by index\n"
     for i, j in enumerate(ls):
         s += f"{i+1}.{j}\n"
@@ -47,19 +47,5 @@ def print_menu():
     print(g_menu)
 
 
-def main():
-    try:
-        print(WELCOME_STRING)
-        while True:
-            print(create_menu_string())
-            break
-
-    except (KeyboardInterrupt, EOFError):
-        print("\ngoodbye!")
-
-
 __all__ = ["print_menu", "print_welcome",
            "create_items_menu", "create_menu_string", "create_journal_menu_string"]
-
-if __name__ == "__main__":
-    main()
