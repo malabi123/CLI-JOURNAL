@@ -5,7 +5,6 @@ WELCOME_STRING = """************************************************************
 ****************************************************************************************
 ****************************************************************************************
 """
-g_menu = ""
 
 
 def create_menu_string(options, journals):
@@ -43,10 +42,6 @@ def print_welcome():
     print(WELCOME_STRING)
 
 
-def print_menu():
-    print(g_menu)
-
-
 def main():
     try:
         print(WELCOME_STRING)
@@ -58,7 +53,7 @@ def main():
         print("\ngoodbye!")
 
 
-__all__ = ["print_menu", "print_welcome",
+__all__ = ["print_welcome",
            "create_items_menu", "create_menu_string", "create_journal_menu_string"]
 
 if __name__ == "__main__":
