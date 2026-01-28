@@ -5,7 +5,6 @@ WELCOME_STRING = """************************************************************
 ****************************************************************************************
 ****************************************************************************************
 """
-g_menu = ""
 
 
 def create_menu_string(options, journals):
@@ -31,7 +30,7 @@ def list_items(ls):
     return s
 
 
-def create_igtems_menu(ls, item):
+def create_items_menu(ls, item):
     s = f"\nplease choose {item} by index\n"
     for i, j in enumerate(ls):
         s += f"{i+1}.{j}\n"
@@ -43,9 +42,5 @@ def print_welcome():
     print(WELCOME_STRING)
 
 
-def print_menu():
-    print(g_menu)
-
-
-__all__ = ["print_menu", "print_welcome",
+__all__ = ["print_welcome",
            "create_items_menu", "create_menu_string", "create_journal_menu_string"]
